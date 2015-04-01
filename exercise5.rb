@@ -3,7 +3,7 @@
 puts "Hello! Give me any temperature in Farenheit and I can convert it into Celsius."
 farenheit = gets.chomp.to_i
 def convert(number)
-	((number - 32) * (5/9.0))
+	((number - 32) * (5.0/9))
 end
 
 celsius = convert(farenheit).round(2)
