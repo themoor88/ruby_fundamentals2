@@ -1,5 +1,6 @@
 # Exercise 7 - Cohort Students
 
+# Defining my print_;list method that will be used a lot.
 def print_list(hash)
   hash.each {|key, value| puts "#{key}: #{value} students"}
 end
@@ -22,9 +23,10 @@ puts students.keys
 # Increasing the cohort by 5%.
 # new_list = students.update(students){ |k,v| v * 1.05 }
 students.each do |key, value|
-  value = (value * 1.05).to_i
-  puts "#{key}: #{value} students"
+  students[key] = (value * 1.05).to_i
 end
+print_list(students)
+# each returns the original array and map returns a new array, it does not change the original one.
 
 # Deleting the 2nd cohort and printing the list again.
 students.delete(:cohort2)
